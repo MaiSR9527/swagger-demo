@@ -1,4 +1,4 @@
-package com.msr.demo.swagger_demo.config;
+package com.msr.demo.swagger.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -12,7 +12,7 @@ import springfox.documentation.spring.web.plugins.Docket;
 import springfox.documentation.swagger2.annotations.EnableSwagger2;
 
 /**
- * @Description:
+ * @Site: https://www.maishuren.top
  * @Author: maishuren
  * @Date: 2019/11/16 13:38
  */
@@ -26,13 +26,13 @@ public class SwaggerConfig {
         return new Docket(DocumentationType.SWAGGER_2)
                 .apiInfo(apiInfo())
                 .select()
-                .apis(RequestHandlerSelectors.basePackage("com.msr.demo.swagger_demo.controller"))
+                .apis(RequestHandlerSelectors.basePackage("com.msr.demo.swagger.controller"))
                 .paths(PathSelectors.any())
                 .build();
     }
 
     private ApiInfo apiInfo() {
-        Contact contact = new Contact("msr", "www.baidu,com", "1208142397@qq.com");
+        Contact contact = new Contact("msr", "www.baidu,com", "maisrcn@qq.com");
         return new ApiInfoBuilder()
                 // 标题
                 .title("Spring Boot中使用Swagger2构建RESTful API")
